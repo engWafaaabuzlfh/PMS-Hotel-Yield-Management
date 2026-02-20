@@ -1,0 +1,566 @@
+{% extends 'yield/navyield.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>YIELD | Settings</title>
+	<meta name="viewport"content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<link rel="stylesheet" href="{% static 'css/settingyield.css' %}">
+</head>
+<body style="background: #f2f2f2;">
+    <div class="setting-container">
+        <div class="setting-tabs">
+            <button class="setting" onclick="openSetting('Strategies', this, '#080833')">Strategies</button>
+            <button class="setting" onclick="openSetting('Thresholds', this, '#080833')">Thresholds</button>
+           <!-- <button class="setting" onclick="openSetting('Competitors', this, '#080833')">Competitors</button>-->
+            <button class="setting" onclick="openSetting('Override', this, '#080833')">Override dates</button>
+            <button class="setting" onclick="openSetting('RoomType', this, '#080833')">Room Type</button>
+            <button class="setting" onclick="openSetting('Budget', this, '#080833')">Budget</button>
+            <button class="setting" onclick="openSetting('Forcast', this, '#080833')">Forecast</button>
+           <!-- <button class="setting" onclick="openSetting('setting-reports', this, '#080833')">reports</button>-->
+            <button class="setting" onclick="openSetting('Calender', this, '#080833')">Calender</button>
+            <button class="setting" onclick="openSetting('Notes', this, '#080833')">Notes</button>
+        </div>
+        <!-- Strategies Settings -->
+        <div class="setting-container-1" id="Strategies" style="display: none;">
+            <table class="setting-table">
+            <tr>
+                <th class="settig-th">Years</th>
+                <th class="settig-th">Months</th>
+                <th class="settig-th">weekdays</th>
+                <th class="settig-th">Days</th>
+                <th class="settig-th">10 Sold</th>
+                <th class="settig-th">15 Sold</th>
+                <th class="settig-th">20 Sold</th>
+                <th class="settig-th">40 Sold</th>
+                <th class="settig-th">50 Sold</th>
+                <th class="settig-th">60 Sold</th>
+                <th class="settig-th">  </th>
+            </tr>
+            <tr>
+                {% for strat in DataStrat %}
+                <td class="settig-td-day">{{strat.years}}</td>
+                <td class="settig-td">{{strat.months}}</td>
+                <td class="settig-td">{{strat.weekdays}}</td>
+                <td class="settig-td-day">{{strat.days}}</td>
+                <td class="settig-td">{{strat.sold10}}</td>
+                <td class="settig-td">{{strat.sold15}}</td>
+                <td class="settig-td">{{strat.sold20}}</td>
+                <td class="settig-td">{{strat.sold40}}</td>
+                <td class="settig-td">{{strat.sold50}}</td>
+                <td class="settig-td">{{strat.sold60}}</td>
+                <td class="settig-td"><form href="#" method="post">
+                    {% csrf_token %}
+                    <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                    <input type="hidden" value="strategy" name="delete">
+                    <input type="hidden" value={{strat.id}} name="idd"></form></td>
+            </tr>
+            {% endfor %}
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="form-id" value="strategy">
+                <tr>
+                    <td class="settig-td-day">All Years</td>
+                    <td class="settig-td"><select  name="monthstrat">
+                        <option value="All">All</option>
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="Jan">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                    </select></td>
+                    <td class="settig-td"><select name="weekstrat">
+                        <option value="Sunday"> Sunday </option>
+                        <option value="Monday"> Monday </option>
+                        <option value="Tuesday"> Tuesday </option>
+                        <option value="Wednesday"> Wednesday </option>
+                        <option value="Thursday"> Thursday </option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    </select></td>
+                    <td class="settig-td"><input type="text" placeholder="7" style="width: 95%; height: 95%;" name="daystrat" required></td>
+                    <td class="settig-td"><input type="text" placeholder="00.0%" style="width: 95%; height: 95%;" name="sold10" required></td>
+                    <td class="settig-td"><input type="text" placeholder="00.0%" style="width: 95%; height: 95%;" name="sold15" required></td>
+                    <td class="settig-td"><input type="text" placeholder="00.0%" style="width: 95%; height: 95%;" name="sold20" required></td>
+                    <td class="settig-td"><input type="text" placeholder="00.0%" style="width: 95%; height: 95%;" name="sold40" required></td>
+                    <td class="settig-td"><input type="text" placeholder="00.0%" style="width: 95%; height: 95%;" name="sold50" required></td>
+                    <td class="settig-td"><input type="text" placeholder="00.0%" style="width: 95%; height: 95%;" name="sold60" required></td>
+                    <td class="settig-td"><button type="submit"  class="btn-delete">Save</button></td>
+                </tr>
+            </form>
+        </table>
+        </div>
+        <!-- ThreShold Settings -->
+        <div class="setting-container-1" id="Thresholds" style="display: none;">
+            <table class="setting-table">
+                <tr>
+                <th class="settig-th">Select</th>
+                <th class="settig-th">Months</th>
+                <th class="settig-th">weekdays</th>
+                <th class="settig-th">Min Price</th>
+                <th class="settig-th">Max Price</th>
+                <th class="settig-th">Sellout</th>
+            
+            </tr>
+            {% for thshd in DataThreshd %}
+            <tr>
+                <td class="settig-td"><form href="#" method="post">
+                    {% csrf_token %}
+                    <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                    <input type="hidden" value="threshold" name="delete">
+                    <input type="hidden" value={{thshd.id}} name="idd"></form></td>
+                <td class="settig-td">{{thshd.month}}</td>
+                <td class="settig-td">{{thshd.weekday}}</td>
+                <td class="settig-td"> {{thshd.min_price}}</td>
+                <td class="settig-td"> {{thshd.max_price}}</td>
+                <td class="settig-td"> {{thshd.sellout}}</td>
+            </tr>
+            {% endfor %}
+            
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="form-id" value="threshold">
+            <tr>
+                <td class="settig-td"><button style="width: 95%; height: 95%; border: none;" type="submit">Save</td>
+                
+                    <td class="settig-td"><select  name="monthshold">
+                        <option value="All">All</option>
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="Jan">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                    </select></td>
+                    <td class="settig-td"><select name="weekshold">
+                        <option value="Sunday"> Sunday </option>
+                        <option value="Monday"> Monday </option>
+                        <option value="Tuesday"> Tuesday </option>
+                        <option value="Wednesday"> Wednesday </option>
+                        <option value="Thursday"> Thursday </option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    </select></td>
+                <td class="settig-td"><input type="text" placeholder="$10.0" name="minshold" style="width: 95%; height: 95%;" required></td>
+                <td class="settig-td"> <input type="text" placeholder="$10.0" name="maxshold" style="width: 95%; height: 95%;"required></td>
+                <td class="settig-td"> <input type="text" placeholder="$10.0" name="salloutshold" style="width: 95%; height: 95%;"required></td>
+            </tr></form>
+        </table>
+            </div>
+        <!--
+        <div class="setting-container-1" id="Competitors" style="display: none;">
+         <div class="setting-comp">
+            <button class="comp"><i class="fa-solid fa-pen-to-square"></i> Edite</button>
+            <button class="comp"><i class="fa-solid fa-square-plus"></i> Add</button>
+         </div>
+            <table class="setting-table">
+            <tr>
+                <th class="comp-th">Hotel Name</th>
+                <th class="settig-th">Sunday</th>
+                <th class="settig-th">Monday</th>
+                <th class="settig-th">Tuesday</th>
+                <th class="settig-th">Wednesday</th>
+                <th class="settig-th">Thursday</th>
+                <th class="settig-th">Friday</th>
+                <th class="settig-th">Saturday</th>
+            </tr>
+            <tr>
+                <td class="comp-th">hotel Name example.. </td>
+                <td class="comp-th-m">Expedia</td>
+                <td class="comp-th-m">13</td>
+                <td class="comp-th-m">13</td>
+                <td class="comp-th-m">13</td>
+                <td class="comp-th-m">13</td>
+                <td class="comp-th-m">13</td>
+                <td class="comp-th-m">13</td>
+                <td class="comp-th-m">13</td>
+            </tr>
+            <tr>
+                <td class="comp-th">hotel Name example.. </td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+            </tr>
+            <tr>
+                <td class="comp-th">hotel Name example.. </td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+            </tr>
+            <tr>
+                <td class="comp-th">hotel Name example.. </td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+            </tr>
+            <tr>
+                <td class="comp-th">hotel Name example.. </td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+                <td class="comp-th-m"></td>
+            </tr>
+        </table>
+        </div>-->
+        <div class="setting-container-1" id="Override" style="display: none;">
+            
+            <table class="setting-table">
+            <tr>
+                <th class="settig-th">Date From</th>
+                <th class="settig-th">Date To</th>
+                <th class="settig-th">Type</th>
+                <th class="settig-th">Value</th>
+                <th class="settig-th">  </th>
+            </tr>
+            {% for ride in DataRide %}
+            <tr>
+                <td class="settig-td-m">{{ride.fromDate}}</td>
+                <td class="settig-td-m">{{ride.toDate}}</td>
+                <td class="settig-td-m">{{ride.type}}</td>
+                <td class="settig-td-m">{{ride.value}}</td>
+                <td class="settig-td-m"><form href="#" method="post">
+                    {% csrf_token %}
+                    <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                    <input type="hidden" value="override" name="delete">
+                    <input type="hidden" value={{ride.id}} name="idd"></form></td>
+            </tr>
+            {% endfor %}
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="form-id" value="override">
+            <tr>
+                <td class="settig-td-m"><input type="text" name="fromOver" placeholder="13/04/2024" style="width: 95%; height: 95%;" required></td>
+                <td class="settig-td-m"><input type="text" name="toOver" placeholder="13/04/2024" style="width: 95%; height: 95%;" required></td>
+                <td class="settig-td-m"><select name="typeOver" required>
+                    <option value="Min Price">Min Price</option>
+                    <option value="Max Price">Max Price</option>
+                </select></td>
+                <td class="settig-td-m"><input type="text" name="valueOver" placeholder="$100.0" style="width: 95%; height: 95%;" required></td>
+               <td class="settig-td-m"> <button class="btn-add-save" type="submit" style="width: 95%; height: 95%; border: none;">Save</button></td>
+            
+            </tr></form>
+            
+        </table>
+        </div>
+        <!-- RooM Type Settings -->
+        <div class="setting-container-1" id="RoomType" style="display: none;">
+            <table class="setting-table">
+                
+                <tr>
+                    <th class="type-t">Select</th>
+                    <th class="type-t">Room Type</th>
+                    <th class="type-t">Min Price</th>
+                    <th class="type-t">Max Price</th>
+                    <th class="type-t">Type</th>
+                    <th class="type-t"><select>
+                        <option> Single $</option>
+                        <option> Single %</option>
+                    </select></th>
+                    <th class="type-t"><select>
+                        <option> Double $</option>
+                        <option> Double %</option>
+                    </select></th>
+                    <th class="type-t"><select>
+                        <option> Triple $</option>
+                        <option> Triple %</option>
+                    </select></th>
+                    <th class="type-t"><select>
+                        <option> Quad $</option>
+                        <option> quad %</option>
+                    </select></th>
+                </tr>
+                {% for room in roomData %}
+                <tr>
+                    <td class="type-t-m"><form href="#" method="post">
+                        {% csrf_token %}
+                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        <input type="hidden" value="roomtype" name="delete">
+                        <input type="hidden" value={{room.id}} name="idd"></form></td>
+                    <td class="type-t"> {{room.roomType}} </td>
+                    <td class="type-t-m">{{room.min_price}}</td>
+                    <td class="type-t-m">{{room.max_price}}</td>
+                    <td class="type-t">{{room.type}}</td>
+                    <td class="type-t-m">{{room.single}}</td>
+                    <td class="type-t-m">{{room.double}}</td>
+                    <td class="type-t-m">{{room.triple}}</td>
+                    <td class="type-t-m">{{room.quad}}</td>
+                </tr>
+                {% endfor %}
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="form-id" value="roomtype">
+                <tr>
+                    <td class="type-t"><button type="submit" style="width: 100%; height: 100%;">Save</button></td>
+                    <td class="type-t"> <input type="text" placeholder="NDD" name="Inproomtype" style="width: 95%; height: 95%;" required> </td>
+                    <td class="type-t"><input type="text" placeholder="$10.0" name="minRoom" style="width: 95%; height: 95%;" required> </td>
+                    <td class="type-t"><input type="text" placeholder="$10.0" name="maxRoom" style="width: 95%; height: 95%;" required> </td>
+                    <td class="type-t"> <select name="typePriceRoom" required>
+                        <option value="Price">Price</option>
+                        <option value="Occupancy">Occupancy</option>
+                        <option value="Revenue">Revenue</option>
+                    </select> </td>
+                    <td class="type-t"> <input type="text" placeholder="$10.0" name="singleRoom" style="width: 95%; height: 95%;"required> </td>
+                    <td class="type-t"> <input type="text" placeholder="$10.0" name="doubleRoom" style="width: 95%; height: 95%;" required> </td>
+                    <td class="type-t"> <input type="text" placeholder="$10.0" name="tripleRoom" style="width: 95%; height: 95%;" required> </td>
+                    <td class="type-t"> <input type="text" placeholder="$10.0" name="quadRoom" style="width: 95%; height: 95%;" required></td>
+                </tr>
+               
+            </table></form>
+        </div>
+        <!-- Notes Settings -->
+        <div class="setting-container-1" id="Notes" style="display: none;">
+            <div class="setting-comp">
+                <button class="comp"><i class="fa-solid fa-trash"></i> Delete</button>
+             </div>
+            <table class="setting-table">
+                <tr>
+                    <th class="date-t"> </th>
+                    <th class="date-t">From Date</th>
+                    <th class="date-t">To Date</th>
+                    <th class="comp-th">Notes</th>
+                </tr>
+                {% for notes in noteData %}
+                <tr>
+                    <td class="date-t"><form href="#" method="post">
+                        {% csrf_token %}
+                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        <input type="hidden" value="notes" name="delete">
+                        <input type="hidden" value={{notes.id}} name="idd"></form></td>
+                    <td class="date-t">{{notes.fromDate}}</td>
+                    <td class="date-t">{{notes.toDate}}</td>
+                    <td class="comp-th">{{notes.note}}</td>
+                </tr>
+                {% endfor %}
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="form-id" value="note">
+                    <tr>
+                        <td class="date-t"><button type="submit" style="width: 95%; height: 95%;">Save</button></td>
+                        <td class="date-t"><input type="text" placeholder="1-1-2024" style="width: 95%; height: 95%;" name="formNote" required></td>
+                        <td class="date-t"><input type="text" placeholder="1-1-2024" style="width: 95%; height: 95%;" name="toNote" required></td>
+                        <td class="comp-th"><textarea type="text" placeholder="00.0%" rows="3" cols="60" style="max-width: 98%; max-height: 97%;min-height: 97%; min-width: 98%;" name="contentNote" required></textarea></td>
+                        </tr></form>
+            </table>
+        </div>
+        <!-- Budget Settings -->
+        <div class="setting-container-1" id="Budget" style="display: none;">
+            <table class="setting-table">
+                <tr>
+                    <th class="date-t"> Monthly Date </th>
+                    <th class="date-t"> Capacity </th>
+                    <th class="date-t"> Occupancy<br><span>Individual</span> </th>
+                    <th class="date-t"> Occupancy <br><span>Group</span></th>
+                    <th class="date-t"> Occupancy <br><span>Allotment</span></th>
+                    <th class="date-t"> Occupancy <br><span>Group Tentative</span></th>
+                    <th class="date-t"> Occupancy <br><span>Allotment Tentative</span> </th>
+                    <th class="date-t"> </th>
+                </tr>
+                {% for budget in budgetData %}
+                <tr>
+                    <td class="settig-td-m">{{budget.monthlydate}}</td>
+                    <td class="settig-td-m">{{budget.capacity}}</td>
+                    <td class="date-t">{{budget.occInd}}</td>
+                    <td class="date-t">{{budget.occGroup}}</td>
+                    <td class="date-t-m">{{budget.occAllotment}}</td>
+                    <td class="date-t-m">{{budget.occGroupTent}}</td>
+                    <td class="date-t-m">{{budget.occAllotmentTent}}</td>
+                    <td class="settig-td-m"><form href="#" method="post">
+                        {% csrf_token %}
+                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        <input type="hidden" value="budget" name="delete">
+                        <input type="hidden" value={{budget.id}} name="idd"></form></td>
+                </tr>
+                {% endfor %}
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="form-id" value="budget">
+                <tr>
+                    <td class="settig-td"><input type="text" placeholder="1-2024" style="width: 95%; height: 95%;" name="monthBudget" required></td>
+                    <td class="settig-td"><input type="text" placeholder="1800" style="width: 95%; height: 95%;" name="capacitBudget" required></td>
+                    <td class="settig-td"><input type="text" placeholder="0" style="width: 95%; height: 95%;" name="IndBudget" required></td>
+                    <td class="settig-td"><input type="text" placeholder="0" style="width: 95%; height: 95%;" name="GroupBudget" required></td>
+                    <td class="settig-td"><input type="text" placeholder="0" style="width: 95%; height: 95%;" name="AllotBudget" required></td>
+                    <td class="settig-td"><input type="text" placeholder="0" style="width: 95%; height: 95%;" name="GroupTentBudget" required></td>
+                    <td class="settig-td"><input type="text" placeholder="0" style="width: 95%; height: 95%;" name="AllotentBudget" required></td>
+                    <td class="settig-td-m"><button type="submit" style="width: 95%; height: 95%;">Save</button></td>
+                </tr></form>
+            </table>
+            </div>
+        <!-- Forecasts Settings -->
+        <div class="setting-container-1" id="Forcast" style="display: none;">
+            <table class="setting-table">
+                <tr>
+                    <th class="date-t"> Monthly Date </th>
+                    <th class="date-t"> Capacity </th>
+                    <th class="date-t"> Occupancy<br><span>Individual</span> </th>
+                    <th class="date-t"> Occupancy <br><span>Group</span></th>
+                    <th class="date-t"> Occupancy <br><span>Allotment</span></th>
+                    <th class="date-t"> Occupancy <br><span>Group Tentative</span></th>
+                    <th class="date-t"> Occupancy <br><span>Allotment Tentative</span> </th>
+                    <th class="date-t-m"> </th>
+                </tr>
+                {% for forecast in forecastData %}
+                <tr>
+                    <td class="settig-td-m">{{forecast.monthlydate}}</td>
+                    <td class="settig-td-m">{{forecast.capacity}}</td>
+                    <td class="date-t">{{forecast.occInd}}</td>
+                    <td class="date-t">{{forecast.occGroup}}</td>
+                    <td class="date-t-m">{{forecast.occAllotment}}</td>
+                    <td class="date-t-m">{{forecast.occGroupTent}}</td>
+                    <td class="date-t-m">{{forecast.occAllotmentTent}}</td>
+                    <td class="settig-td-m"><form href="#" method="post">
+                        {% csrf_token %}
+                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        <input type="hidden" value="forecast" name="delete">
+                        <input type="hidden" value={{forecast.id}} name="idd"></form>
+                    </td>
+                </tr>
+                {% endfor %}
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="form-id" value="forecast">
+                <tr>
+                    <td class="settig-td"><input type="text" placeholder="1-2024" style="width: 95%; height: 95%;" name="monthforecast" required></td>
+                    <td class="settig-td"><input type="text" placeholder="1800" style="width: 95%; height: 95%;" name="capacitforecast" required></td>
+                    <td class="settig-td"><input type="text" placeholder="0" style="width: 95%; height: 95%;" name="Indforecast" required></td>
+                    <td class="settig-td"><input type="text" placeholder="0" style="width: 95%; height: 95%;" name="Groupforecast" required></td>
+                    <td class="settig-td"><input type="text" placeholder="0" style="width: 95%; height: 95%;" name="Allotforecast" required></td>
+                    <td class="settig-td"><input type="text" placeholder="0" style="width: 95%; height: 95%;" name="GroupTentforecast" required></td>
+                    <td class="settig-td"><input type="text" placeholder="0" style="width: 95%; height: 95%;" name="Allotentforecast" required></td>
+                    <td class="settig-td-m"><button type="submit" style="width: 95%; height: 95%;">Save</button></td>
+                </tr></form>
+            </table>
+            </div>
+        </div>
+        <!-- reports Settings -->
+        <div class="setting-container-1" id="setting-reports" style="display: none;">
+            <table class="setting-table">
+                <tr>
+                    <th class="settig-th"> </th>
+                    <th class="settig-th">Active</th>
+                    <th class="settig-th">Type</th>
+                    <th class="settig-th">Period</th>
+                    <th class="settig-th">weekdays</th>
+                    <th class="settig-th">Day of months</th>
+                    <th class="settig-th">Send to </th>
+                </tr>
+                <tr>
+                    <td class="settig-td" width="30px"><input type="checkbox"></td>
+                    <td class="settig-td"></td>
+                    <td class="settig-td"></td>
+                    <td class="settig-td"></td>
+                    <td class="settig-td"></td>
+                    <td class="settig-td-m"></td>
+                    <td class="settig-td-m"></td>
+                </tr>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="form-id" value="report">
+                <tr>
+                    <td class="settig-td"><button type="submit" style="width: 95%; height: 95%;">Save</button></td>
+                    <td class="settig-td"><input type="checkbox" name="activeReport"></td>
+                    <td class="settig-td"><input type="text" placeholder="00.0%" style="width: 95%; height: 95%;" name="sold60" required></td>
+                    <td class="settig-td"><select name="periodreport" required>
+                        <option value="Daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Weekly</option>
+                    </select></td>
+                    <td class="settig-td"><input type="text" placeholder="00.0%" style="width: 95%; height: 95%;" name="sold60" required></td>
+                    <td class="settig-td"><input type="text" placeholder="00.0%" style="width: 95%; height: 95%;" name="sold60" required></td>
+               </tr></form>
+            </table>
+        </div>
+        <!-- Calender Settings -->
+        <div class="setting-container-1" id="Calender" style="display: none; padding-top: 10px; background: #fff;">
+            <div class="setting-comp" style="margin-left: 25px;">
+                <button class="comp"><i class="fa-solid fa-trash"></i> Delete</button>
+             </div>
+            <table class="setting-table">
+                <tr>
+                    <th class="date-t">Type</th>
+                    <th class="date-t">From Date</th>
+                    <th class="date-t">To Date</th>
+                    <th class="date-t">Name</th>
+                    <th> </th>
+                </tr>
+                {% for cldr in Datacldr %}
+                <tr>
+                    <td class="date-t">{{cldr.type}}</td>
+                    <td class="settig-td-m">{{cldr.fromDate}}</td>
+                    <td class="settig-td-m">{{cldr.toDate}}</td>
+                    <td class="settig-td-m">{{cldr.name}}</td>
+                    <td class="date-t" style="width: 30px;"><form href="#" method="post">
+                        {% csrf_token %}
+                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        <input type="hidden" value="cldr" name="delete">
+                        <input type="hidden" value={{cldr.id}} name="idd"></form></td>
+                </tr>
+                {% endfor %}
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="form-id" value="cldr">
+                <tr>
+                    <td class="date-t"><input type="text" placeholder=".." style="width: 95%; height: 95%;" name="typecldr" required></td>
+                    <td class="settig-td-m"><input type="text" placeholder="1-1-2024" style="width: 95%; height: 95%;" name="fromcldr" required></td>
+                    <td class="settig-td-m"><input type="text" placeholder="1-2-2024" style="width: 95%; height: 95%;" name="tocldr" required></td>
+                    <td class="settig-td-m"><input type="text" placeholder=".." style="width: 95%; height: 95%;" name="namecldr" required></td>
+                    <td class="date-t" style="width: 30px;"><button type="submit" style="width: 95%; height: 95%;">Save</button></td>
+                </tr></form>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    var spanNav = document.getElementById("span-nav")
+    spanNav.innerHTML = "Settings"
+    function openSetting(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("setting-container-1");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("setting");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "#ccc";
+    }
+    document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+  }
+  document.getElementById("defaultOpen").click();
+    
+
+</script>
+{% endblock content %}

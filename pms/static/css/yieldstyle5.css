@@ -1,0 +1,283 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.list-nav{
+    width: 100%;
+    margin: 0px;
+    height: 30x;
+    position: fixed;
+    top: 0;
+    opacity: 100%;
+    background: #fff;
+    padding-bottom: 20px;
+}
+.list-nav .btn-list{
+    width: 100%;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-top: 25px;
+    color: #080833;
+    float: left;
+}
+.list-nav span{
+    width: calc(100%-290px);
+    font-size: 20px;
+    text-decoration: none;
+    text-align: left;
+    color: #777;
+}
+.list-nav .list-nav-right p{
+    font-size: 20px;
+}
+.right-content{
+    height: auto;
+    width: auto;
+    float: left;
+    border-radius: 20px;
+    margin-left: 10px;
+    box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.1);
+    background: #ccc3a3;
+    transition: all 0.3s ease-in-out;
+    color: #080833;    
+    position:fixed;
+    top: 60px;
+}
+
+.right-content .title{
+    width: 100%;
+    height: 45px;
+    font-size: 25px;
+    padding-left: 20px;
+    color: #080833;
+}
+.right-content .title i{
+    font-size: 23px;
+    float: left;
+}
+.right-content .title p{
+    font-size: 23px;
+    color: #080833;
+}
+.right-content .right-content-1{
+    padding-top: 20px;
+    width: 300px;
+    float: left;
+    height: auto;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+}
+.right-content .parts{
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    text-align: left;
+    background: #ccc3a3;
+}
+.right-content .parts a{
+    text-decoration: none;
+}
+.right-content .parts p{
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    font-size: 20px;
+    color: #080833;
+    margin-left: 15px;
+}
+.parts :active {
+    background-color: #ccc; /* لون افتراضي للألسنة المنتقاة */
+}
+
+
+.body-dashboard{
+    margin-top: 80px;
+    width: 100%;
+}
+.body-dashboard .hotel-title{
+    width: 100%;
+    font-size: 15px;
+    text-align: right;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.hotel-title H1{
+    width: 350px;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    right: 20px;
+    color: #080833;
+    background: #ccc3a3;
+}
+
+.container {
+    max-width: calc(100%);
+    margin: 0px auto;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: auto;
+}
+.body-dashboard .container-market{
+    width: 100%;
+}
+.container-market .market1{
+    width: 30%;
+    border-radius: 10px;
+    height:60px;
+    padding-left: 5px;
+    float: left;
+    margin-left: 30px;
+}
+.container-market .market1 .market2-m{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+.container div {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Styles for specific components */
+.dashboard, .reports, .analytics {
+    background-color: #f8f8f8;
+    padding-top: 50px;
+}
+
+
+/* Additional styles for content */
+.dashboard-content, .reports-content, .analytics-content {
+    margin-top: 100px;
+
+}
+
+p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* CSS styles remain the same */
+
+/* Additional styles for charts */
+canvas {
+    max-width: 1200px;
+    max-height: 300px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Additional styles for yield management */
+.yield-management {
+    background-color: #f0f0f0;
+    width: 100%;
+    box-shadow: none;
+}
+#yield-management{
+    box-shadow: none;
+}
+.yield-management .yield-management-content{
+    margin-top: 30px;
+    width: 45%;
+    float: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#priceDistributionChart, #priceDistributionChartAI{
+    width: 100px;
+    height: 200px;
+}
+.yield-management .yield-management-content-AI {
+    margin-top: 30px;
+    width: 45%;
+    float: right;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container .market1{
+    width: 300;
+    margin-top: 20px;
+}
+.market1 .market1-main,.market1 .market1-main{
+    width: 40%;
+    float: left;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+.yield-management p{
+    font-weight: bold;
+}
+.yield-management-content .market1 .market1-m, .yield-management-content-AI .market1 .market1-m{
+    width: 25%;
+    float: left; 
+    text-align: center; 
+}
+.yield-management-content-AI input{
+    margin-top: 150px;
+    width: 320px;
+    height: 50px;
+}
+.yield-management-content-AI button{
+    border: none;
+    height: 60px;
+    font-size: 20px;
+    width:50px;
+    color: #080833;
+}
+.yield-management-content-AI .message{
+    background-color: #777;
+    border: 1px solid lightgrey;
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 5px;
+    color: #f0f0f0;
+}
+
+@media only screen and (max-width:767px){
+    .right-content{
+     position: right;
+     left: 0;
+     width: 100%;
+    } 
+    .right-content .right-content-1{
+     width: 150px;
+     font-size: 13px;
+    }
+    .right-content-1 .parts p{
+     font-size: 15px;
+    }
+    .container-market .market1{
+        width: 90%;
+        margin-top: 10px;
+    }
+    .yield-management{
+        width: auto;
+        height: auto;
+    }
+    .yield-management .yield-management-content-AI,.yield-management .yield-management-content {
+        margin-top: 30px;
+        width: 100%;
+        float: none;
+    }
+    .yield-management p{
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .list-nav .btn-list{
+        font-size: 20px;
+    }
+    .list-nav .btn-list #span-nav{
+        font-size: 15px;
+    }
+ }

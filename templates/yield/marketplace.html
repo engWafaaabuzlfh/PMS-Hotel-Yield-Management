@@ -1,0 +1,88 @@
+{% extends 'yield/navyield.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Market Place</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<link rel="stylesheet" href="{% static 'css/marketplace2.css' %}">
+</head>
+<body>
+
+    <div class="place-container">
+        <div class="setting-comp">
+       <form method="post" href="#">
+            {% csrf_token %} 
+            <input type="hidden" value="location" name="fromId">
+            <input type="text" name="location" placeholder="Enter a city name" value="Montreal"> 
+            <button class="btn-delete"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        </div>
+        <table class="table-place">
+            <tr>
+                <th class="place-m"></th>
+                <th class="hotel-place">Hotel</th>
+                {% for day in weekdays %}
+                <th class="day-place">{{day.day0}}</th>
+                <th class="day-place">{{day.day1}}</th>
+                <th class="day-place">{{day.day2}}</th>
+                <th class="day-place">{{day.day3}}</th>
+                <th class="day-place">{{day.day4}}</th>
+                <th class="day-place">{{day.day5}}</th>
+                <th class="day-place">{{day.day6}}</th>
+                {% endfor %}
+
+                
+            </tr>
+            {% for data in dataAll %}
+            <tr>
+                <td class="place-m">
+                    <form method="post" href="#">
+                        {% csrf_token %}
+                        <button type="submit" class="btn-delete"><i class="fa-solid fa-star"></i></button>
+                        <input type="hidden" value="delete" name="fromId">
+                        <input type="text" value="{{data.name}}" name="hotel" style="display: none;">
+              
+                    </form>
+                    <form method="post" href="#">
+                        {% csrf_token %}
+                        <button type="submit" class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        <input type="hidden" value="star" name="fromId">
+                        <input type="text" value="{{data.name}}" name="hotel" style="display: none;">
+                    </form>
+                </td>
+                <td class="hotel-place-m">{{ data.hotel }}</td>
+                <td class="day-place-m"> {{ data.CheckIn0 }} </td>
+                <td class="day-place-m">{{ data.CheckIn1 }}</td>
+                <td class="day-place-m">{{ data.CheckIn2 }}</td>
+                <td class="day-place-m">{{ data.CheckIn3 }}</td>
+                <td class="day-place-m">{{ data.CheckIn4 }}</td>
+                <td class="day-place-m">{{ data.CheckIn5 }}</td>
+                <td class="day-place-m">{{ data.CheckIn6 }}</td>
+                
+            </tr>
+            {% endfor %}
+            
+           
+            
+        </table>
+    </div>
+</body>
+<script>
+    var spanNav = document.getElementById("span-nav")
+    spanNav.innerHTML = "Market Place"
+    function toggleButtonGroup() {
+    var checkbox = document.getElementById("checkbox");
+    var buttonGroup = document.querySelector(".setting-comp");
+    if (checkbox.checked) {
+        buttonGroup.style.display = "block";
+    } else {
+        buttonGroup.style.display = "none";
+    }
+}
+</script>
+{% endblock content %}

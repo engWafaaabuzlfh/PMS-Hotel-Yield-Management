@@ -1,0 +1,517 @@
+{% extends 'yield/navyield.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>RoomType|Property Mangement System</title>
+	<meta name="viewport"content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<link rel="stylesheet" href="{% static 'css/roomtypes.css' %}">
+	<link rel="stylesheet" href="{% static 'css/monthly1.css' %}">
+
+</head>
+<body>
+    <div class="room-container">
+        <div class="monthly-tabs">
+            <button class="now-monthly" onclick="openMonth('now', this, '#080833')">NDD</button>
+            <button class="now-monthly" onclick="openMonth('past', this, '#080833')">NQQ</button>
+        </div>
+    <!-- TTPE 1-->
+        <div class="room-container-1" id="now" style="display: none;"> 
+        <table class="room-table">
+            <tr>
+                <th class="room-type">type\2024  </th>
+                <th class="room-month"> Jan </th>
+                <th class="room-month"> Feb </th>
+                <th class="room-month"> Mar </th>
+                <th class="room-month"> Apr </th>
+                <th class="room-month"> May </th>
+                <th class="room-month"> Jun </th>
+                <th class="room-month"> Jul </th>
+                <th class="room-month"> Aug </th>
+                <th class="room-month"> Sep </th>
+                <th class="room-month"> Oct </th>
+                <th class="room-month"> Nov </th>
+                <th class="room-month"> Dec </th>
+            </tr>
+            <tr>
+                <td class="room-type-m">Occupancy <span>sales</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr>
+            <tr>
+                <td class="room-type-m">Occupancy <span>sales year ago same time</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Occupancy <span>sales final last year</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr>
+            <tr>
+                <td class="room-type-m">ADR <span>sales ADR </span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">ADR  <span>sales ADR year ago same time</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">ADR <span>sales final last year</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Revenues <span>sales</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Revenues <span>sales year ago same time</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Revenues <span>sales final last year</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr>
+        </table>
+    </div>
+    <!-- TYPE 2-->
+    <div class="room-container-1" id="past" style="display: none;"> 
+        <table class="room-table">
+            <tr>
+                <th class="room-type">type/2024 </th>
+                <th class="room-month"> Jan </th>
+                <th class="room-month"> Feb </th>
+                <th class="room-month"> Mar </th>
+                <th class="room-month"> Apr </th>
+                <th class="room-month"> May </th>
+                <th class="room-month"> Jun </th>
+                <th class="room-month"> Jul </th>
+                <th class="room-month"> Aug </th>
+                <th class="room-month"> Sep </th>
+                <th class="room-month"> Oct </th>
+                <th class="room-month"> Nov </th>
+                <th class="room-month"> Dec </th>
+            </tr>
+            <tr>
+                <td class="room-type-m">Occupancy <span>sales</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr>
+            <tr>
+                <td class="room-type-m">Occupancy <span>sales year ago same time</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Occupancy <span>sales final last year</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr>
+            <tr>
+                <td class="room-type-m">ADR <span>sales ADR </span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">ADR  <span>sales ADR year ago same time</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">ADR <span>sales final last year</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Revenues <span>sales</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Revenues <span>sales year ago same time</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Revenues <span>sales final last year</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr>
+        </table>
+    </div>
+    <!-- TYPE 3 -->
+    <div class="room-container-1" style="display: none;"> 
+        <div class="type-NN"><p>NQQ</p></div>
+        <table class="room-table">
+            <tr>
+                <th class="room-type">  </th>
+                <th class="room-month"> Jan </th>
+                <th class="room-month"> Feb </th>
+                <th class="room-month"> Mar </th>
+                <th class="room-month"> Apr </th>
+                <th class="room-month"> May </th>
+                <th class="room-month"> Jun </th>
+                <th class="room-month"> Jul </th>
+                <th class="room-month"> Aug </th>
+                <th class="room-month"> Sep </th>
+                <th class="room-month"> Oct </th>
+                <th class="room-month"> Nov </th>
+                <th class="room-month"> Dec </th>
+            </tr>
+            <tr>
+                <td class="room-type-m">Occupancy <span>sales</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr>
+            <tr>
+                <td class="room-type-m">Occupancy <span>sales year ago same time</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Occupancy <span>sales final last year</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr>
+            <tr>
+                <td class="room-type-m">ADR <span>sales ADR </span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">ADR  <span>sales ADR year ago same time</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">ADR <span>sales final last year</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Revenues <span>sales</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Revenues <span>sales year ago same time</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr><tr>
+                <td class="room-type-m">Revenues <span>sales final last year</span></td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+                <td class="room-month-m">333</td>
+
+            </tr>
+        </table>
+    </div>
+    </div>
+</body>
+<script>
+    var spanNav = document.getElementById("span-nav")
+    spanNav.innerHTML = "Room Type Totals"
+    function openMonth(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("room-container-1");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("now-monthly");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "#ccc";
+    }
+    document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+  }
+  document.getElementById("defaultOpen").click();
+    
+</script>
+{% endblock content %}

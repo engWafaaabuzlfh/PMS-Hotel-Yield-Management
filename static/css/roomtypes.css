@@ -1,0 +1,125 @@
+.room-container, .dow-container{
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+    margin-top: 80px;
+}
+.dow-container{
+    background: #fff;
+}
+.room-container .room-container-1, .room-container-2, .room-container .dow-container-1{
+    width: 100%;
+}
+.room-container-1 .type-NN, .room-container-2 .type-NN{
+    width: auto;
+    height: 595px;
+    float: left;
+    background: #080833;
+    color: #fff;
+}
+
+.room-container-1 .type-NN p, .room-container-2 .type-NN p{
+    text-align: center;
+    margin-top: 290px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.room-container-1 .room-table, .room-container-2 .room-table, .dow-container-1 .room-table{
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10px;
+   background: #fff;
+   border: 2px solid lightgrey;
+}
+.room-container-2{
+    padding-left: 0px;
+    margin-top: 25px;
+}
+.room-table th{
+    background: #080833;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.room-table .room-type{
+    min-width: 350px;
+}
+.room-table .room-month{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 150px;
+}
+
+.room-table .room-type-m{
+    padding-left: 10px;
+    background: #f2f2f2;
+    color: #080833;
+}
+.room-table .room-type-m span{
+    color: #555;
+}
+.room-table td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.room-table .room-month-m{
+    text-align: center;
+    color: #080833;
+    background: #ccc3a3;
+}
+
+/* dow yoy */
+
+.dow-container-1 .type-NN{
+    height: 45px; /* Dow yoy */
+    background: #222;
+    width: 300px;
+    margin-left: 20px;
+    border-radius: 1px solid lightgrey;
+    border-radius: 10px;
+    color: #fff;
+}
+.dow-container-1 .type-NN p{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.dow-container-1 .room-table{
+    width: calc(100% - 100px);
+    margin-top: 50px;
+}
+
+.room-table .dow-day{
+    background: #080833;
+    color: #fff;
+    text-align: center;
+    min-width: 70px;
+    font-size: 18px;
+} /* dow day */
+.dow-day span{
+    color: #777;
+    font-size: 14px;
+}
+.dow-container-1 .room-table th{
+    font-size: 16px;
+    font-weight: 300;
+}
+.room-table .dow-type-m{
+    padding-left: 10px;
+    background: #ccc3a3;
+    font-size: 16px;
+    min-width: 200px;
+    max-width: 250px;
+    color: #080833;
+    font-weight: bold;
+}
+.room-table .dow-day-m{
+    text-align: center;
+    border: 1px solid #ccc3a3;
+}

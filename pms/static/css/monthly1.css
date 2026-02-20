@@ -1,0 +1,126 @@
+.monthly-container{
+    margin-top: 70px;
+    width: 100%;
+    background: #f2f2f2;
+    height: 100%;
+}
+.monthly-container .monthly-tabs{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.monthly-tabs button{
+    width: 200px;
+    margin-left: 20px;
+    border: none;
+    background: #f2f2f2;
+    min-height: 50px;
+    background: #ccc;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.monthly-container .monthly-container-1, .monthly-container-2{
+    width: 100%;
+    background: #f2f2f2;
+}
+.monthly-container-1 .monthly-table{
+    width: 100%;
+    background: #f2f2f2;
+    margin-left: 20px;
+}
+.monthly-container-1 .type-NN{
+    width: 100%;
+    background: #f2f2f2;
+}
+.type-NN select{
+    margin-left: 20px;
+    background: #ccc3a3;
+    color: #080833;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    min-width: 150px;
+    border: 1px solid lightgrey;
+}
+.monthly-container-1 .past-monthly-table, .monthly-container-2 .monthly-table{
+    width: 100%;
+    border: 1px solid lightgrey;
+}
+.monthly-table th{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #080833;
+    color: #f2f2f2;
+}
+.monthly-table .monthly-type-m{
+    background: #ccc3a3;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.monthly-table .monthly-type{
+    min-width: 200px;
+}
+.monthly-table .month{
+    min-width: 50px;
+    text-align: center;
+}
+.monthly-table .month span{
+    font-size: 16px;
+    color: #ccc3a3;
+}
+.monthly-table .month-m{
+    text-align: center;
+    border: 1px solid #ccc3a3;
+}
+.past-monthly-table th{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid lightgrey;
+}
+.past-monthly-table .monthly-type{
+    min-width: 200px;
+    text-align: center;
+}
+.past-monthly-table .monthly-type-m{
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.past-monthly-table .month{
+    min-width: 50px;
+    text-align: center;
+}
+
+.past-monthly-table .month-m{
+    text-align: center;
+
+}
+
+.monthly-table .top-type{
+    min-width: 50px;
+    max-width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.top-type select{
+    width: 100%;
+    font-size: 16px;
+    height: 50px;
+    border: none;
+    background: #ccc3a3;
+    color: #080833;
+}
+.monthly-table{
+    border: 1px solid #ccc3a3;
+}
+.monthly-table .top-type-m{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border: 1px solid #ccc3a3;
+    background: #ccc3a3;
+}

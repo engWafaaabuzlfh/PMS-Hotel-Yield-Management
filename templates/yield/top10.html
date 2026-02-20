@@ -1,0 +1,131 @@
+{% extends 'yield/navyield.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>RoomType|Property Mangement System</title>
+	<meta name="viewport"content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<link rel="stylesheet" href="{% static 'css/monthly1.css' %}">
+</head>
+<body style="background: #f2f2f2;">
+    <div class="monthly-container">
+        <div class="monthly-container-1" style="padding-top: 50px;">
+            <table class="monthly-table" style="width: 95%;">
+                <tr>
+                    <th class="top-type" style="background: #ccc3a3;">
+                        <select>
+                            <option>Top-10 dates by Pick-up</option>
+                            <option>Top-10 dates Occpacing ahead</option>
+                        </select>
+                    </th>
+                    <th class="top-type">Total Date</th>
+                    <th class="top-type">Total Difference</th>
+                    <th class="top-type">Total % Change</th>
+                    <th class="top-type">Individual Date</th>
+                    <th class="top-type">Individual Difference</th>
+                    <th class="top-type">Individual % Change</th>
+
+                </tr>
+                <tr>
+                    <td class="top-type-m">1</td>
+                    <td class="top-type-m">04 Apr 2024</td>
+                    <td class="top-type-m">45</td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m">04 Apr 2024 </td>
+                    <td class="top-type-m">49</td>
+                    <td class="top-type-m"> </td>
+                </tr>
+                <tr>
+                    <td class="top-type-m">2</td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                </tr>
+                <tr>
+                    <td class="top-type-m">3</td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                </tr>
+                <tr>
+                    <td class="top-type-m">4</td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                </tr>
+                <tr>
+                    <td class="top-type-m">5</td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                </tr>
+                <tr>
+                    <td class="top-type-m">6</td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                </tr>
+                <tr>
+                    <td class="top-type-m">7</td>
+                    <td class="top-type-m">12 Apr 2024 </td>
+                    <td class="top-type-m">48</td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> 12 Apr 2024</td>
+                    <td class="top-type-m"> 48</td>
+                    <td class="top-type-m"> </td>
+                </tr>
+                <tr>
+                    <td class="top-type-m">8</td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                </tr>
+                <tr>
+                    <td class="top-type-m">9</td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                </tr>
+                <tr>
+                    <td class="top-type-m">10</td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                    <td class="top-type-m"> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    var spanNav = document.getElementById("span-nav")
+    spanNav.innerHTML = "TOP 10"
+    
+</script>
+{% endblock content %}

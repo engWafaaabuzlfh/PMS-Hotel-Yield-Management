@@ -1,0 +1,151 @@
+.place-container{
+    margin-top: 100px;
+    width: 100%;
+}
+
+.place-container .table-place{
+    width: 100%;
+    height: 100px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+    height: 100%;
+}
+
+.place-container .table-place th{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #080833;
+}
+.hotel-place{
+    min-width: 100px;
+    background: #ccc3a3;
+    border: 1px solid #ccc3a3;
+    color: #080833;
+}
+.place-m{
+    min-width: 30px;
+    max-width: 30px;
+    background:#080833 ;
+    color: #fff;
+}
+.place-m button{
+    border: none;
+    background: #080833;
+    float: left;
+    color: #fff;
+    font-size: 16px;
+}
+.place-m i{
+    margin-left: 10px;
+}
+.hotel-place-m{
+    background: #ccc3a3;
+    max-height: 50px;
+    max-width: 100px;
+    padding-left: 10px;
+    font-size: 15px;
+    border: 1px solid #080833;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #080833;
+}
+.hotel-place-m i{
+    color: #e5ddbc;
+    margin-right: 2px;
+    font-size: 20px;
+}
+
+.setting-comp button{
+    border: none;
+    border-radius: 20px;
+    width: auto;
+    height: 50px;
+    background: #ccc3a3;
+    color: #080833;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.setting-comp form{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.setting-comp input{
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #ccc3a3;
+    min-width: 500px;
+    padding-left: 10px;
+}
+.setting-comp input:active{
+    border: none;
+}
+.day-place{
+    background: #080833;
+    color: #fff;
+    width: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.day-place-m{
+    padding-left: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #080833;
+    border: 1px solid #ccc3a3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+@media only screen and (max-width:767px){
+
+    .place-container{
+        width: 100%;
+    }
+
+    .setting-comp {
+        width: 100%;
+        margin-left: 10px;
+        padding-left: 0px;
+    }
+    .setting-comp form{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .setting-comp form input{
+        min-width: 60%;
+        float: left;
+        margin-left: 10px;
+    }
+    .setting-comp form button{
+        width: 15%;
+        float: left;
+    }
+    .table-place{
+        width: 100%;
+    }
+    .table-place tr th{
+        width: auto;
+        padding-left: 3px;
+        padding-right: 3px;
+    } 
+    .table-place .day-place, .table-place .day-place-m{
+        min-width: 15px;
+    }
+    .table-place .hotel-place-m{
+        font-size: 13px;
+        min-width: 70px;
+        font-weight: bold;
+    }
+    .table-place .place-m{
+        min-width: 25px;
+    }
+    .place-m button{
+        font-size: 11px;
+    }
+}

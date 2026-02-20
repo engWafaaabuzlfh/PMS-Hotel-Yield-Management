@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/yieldstyle5.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="list-nav">
+        <a href="#" class="btn-list"><i class="fa-solid fa-bars"> Yield List / <span id="span-nav">Dashboard</span></i></a> 
+    </div>
+    <nav class="right-content" id="navList" style="display: none;">
+        <div class="right-content-1">
+        <div class="parts" onclick="openPage('Main', this, '#0373fc')">
+            <a href="{% url 'YieldMain' %}"><p><i class="fa-solid fa-house"></i> Main</p></a>
+        </div><hr>
+        <div class="parts" onclick="openPage('dashboard', this, '#0373fc')">
+            <a href="{% url 'YieldDASHBoard' %}"> <p> <i class="fa-solid fa-magnifying-glass-chart"></i> Dashboard</p></a>
+        </div><hr>
+        
+        <!--
+        <div class="parts" onclick="openPage('reports', this, '#0373fc')">
+            <p> <i class="fa-solid fa-chart-column"></i> reports</p>
+        </div><hr>
+        <div class="parts" onclick="openPage('analytics', this, '#0373fc')">
+            <p> <i class="fa-solid fa-chart-line"></i> Analytics</p>
+        </div><hr>-->
+        <div class="parts" onclick="openPage('Marcet', this, '#0373fc')">
+            <a href="{% url 'YieldMarketPlace' %}"><p><i class="fa-brands fa-rev"></i> Market Place</p></a>
+        </div><hr>
+        <div class="parts" onclick="openPage('Bookings', this, '#0373fc')">
+            <a href="{% url 'YieldRoomType' %}"> <p><i class="fa-solid fa-shop"></i> Room Types</p></a>
+        </div><hr>
+        <div class="parts" onclick="openPage('Bookings', this, '#0373fc')">
+            <a href="{% url 'YieldForcasts' %}"><p><i class="fa-solid fa-chart-line"></i> Forecasts</p></a>
+        </div></div>
+        <div class="right-content-1">
+        <div class="parts" onclick="openPage('Bookings', this, '#0373fc')">
+            <a href="{% url 'YieldTop10' %}"> <p><i class="fa-solid fa-ranking-star"></i> Top10</p></a>
+         </div><hr>
+         <div class="parts" onclick="openPage('Bookings', this, '#0373fc')">
+            <a href="{% url 'YieldDOWYOY' %}"> <p><i class="fa-solid fa-chart-pie"></i> Dow Yoy</p></a>
+         </div><hr>
+         <div class="parts" onclick="openPage('Bookings', this, '#0373fc')">
+            <a href="{% url 'YieldMonthly' %}"> <p><i class="fa-solid fa-chart-simple"></i> Monthly Totals </p></a>
+         </div><hr>
+        <div class="parts" onclick="openPage('Bookings', this, '#0373fc')">
+           <a href="{% url 'YieldCalender' %}"> <p><i class="fa-solid fa-calendar-days"></i> Calendar</p></a>
+        </div><hr>
+        <div class="parts" onclick="openPage('Bookings', this, '#0373fc')">
+            <a href="{% url 'YieldRateHistory' %}"> <p><i class="fa-regular fa-clock"></i> History</p></a>
+        </div>
+    </div>
+    <div class="right-content-1">
+        <div class="parts" onclick="openPage('AI', this, '#0373fc')">
+            <a href="{% url 'YieldCalender' %}"> <p><i class="fa-solid fa-bolt"></i> Artificial Intelligence</p></a>
+        </div><hr>
+        <div class="parts" onclick="openPage('Bookings', this, '#0373fc')">
+            <a href="#"> <p><i class="fa-solid fa-money-bill-trend-up"></i> Pricing</p></a>
+        </div><hr>
+        <div class="parts" onclick="openPage('Bookings', this, '#0373fc')">
+            <a href="{% url 'YieldSettings' %}"> <p><i class="fa-solid fa-gears"></i> yield Settings </p></a>
+         </div><hr>
+        <div class="parts" onclick="openPage('Bookings', this, '#0373fc')">
+            <a href="{% url 'ReverseForm' %}">  <p>PMS Hotel</p></a>
+        </div>
+    </div>
+    </nav>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const YieldButton = document.querySelector('.btn-list');
+    const YieldList = document.querySelector('#navList');
+
+    YieldButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        YieldList.style.display = (YieldList.style.display === 'block') ? 'none' : 'block';
+    });
+    }); 
+function openPage(pageName, elmnt, color) {
+    const YieldList = document.querySelector('#navList');
+    YieldList.style.display = "none"
+    var spanNav = document.getElementById("span-nav")
+    spanNav.innerHTML = pageName
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("container");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("parts");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.classList.add("active");
+  }
+  document.getElementById("defaultOpen").click();
+
+
+
+</script>
+</html>
+{% block content %}
+{% endblock content %}

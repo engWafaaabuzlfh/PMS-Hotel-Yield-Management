@@ -1,0 +1,360 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reversation</title>
+    <!-- Main css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/reverse1.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="rev-nav">
+            <div class="rev-nav-left">LOGO</div><div class="vertical" style="margin-left: 110px;"></div>
+            <div class="rev-title" ><h1 id="rev-title"> Hotel Reversation Mangement</h1> </div></div>
+            <div class="Hotel-account"> <div class="vertical"></div>My hotel <i class="fa-solid fa-circle-user"></i></div>
+            <hr>
+        </nav>
+        <div class="main-left">
+          <div class="pms-right"><button id="HotelPMS"> PMS PMS<i class="fa-solid fa-chevron-down"></i></button></div><hr>
+          <div id="pmscomponent" style="display: block;">  
+          <a href="#"><div class="part" onclick="openPMS('Reversation Management', this, '#0373fc')"><p>Rooms Bookings</p></div></a><hr>
+            <a href="#"><div class="part" onclick="openPMS('Front-Desk', this, '#0373fc')"><p>Front-desk</p></div></a> <hr>
+            <a href="#"><div class="part" onclick="openPMS('HouseKeeping', this, '#0373fc')"><p>HouseKeeping</p></div></a><hr>
+            <a href="#"><div class="part" onclick="openPMS('Reports & Analytics', this, '#0373fc')"><p>Reports & Analytics</p></div></a><hr>
+            <a href="#"><div class="part" onclick="openPMS('Notes', this, '#0373fc')"><p>Notes</p></div></a><hr></div>
+        </div>
+        <div class="main-tabs" id="Reversation Management">
+            <button class="tablink" onclick="openPage('Bookings', this, '#0373fc')">Bookings</button>
+            <button class="tablink" onclick="openPage('status', this, '#0373fc')">Check-In</button>
+            <label><i class="fa-solid fa-magnifying-glass"></i></label><input type="text" class="tablink-search" placeholder="room: ex, 110" id="myInput" onkeyup="myFunction()">
+            <button class="tablink" onclick="openPage('Add', this, '#0373fc')">Add</button>  
+        
+        <div id="Bookings" class="tabcontent" style="display: none;">
+            <table id="myTable">
+                <tr>
+                  <th class="table-title"> Name </th>
+                  <th class="table-title">Room</th>
+                  <th class="table-title">Type</th>
+                  <th class="table-title">Date</th>
+                  <th class="table-title">Date</th>
+                  <th class="table-title">Payment</th>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>105</td>
+                  <td style="color: #11781f;">3 stars</td>
+                  <td>24/3/2024</td>
+                  <td> 2 weeks </td>
+                  <td style="color: red;"> 100$ </td>
+                </tr>
+                <tr>
+                    <td>Wafaa abuzlfh</td>
+                    <td>220</td>
+                    <td style="color: #11781f;">4 stars</td>
+                    <td>24/3/2024</td>
+                    <td> 1 month </td>
+                    <td style="color: red;"> 200$ </td>
+                  </tr>
+                  <tr>
+                    <td>Wafaa abuzlfh</td>
+                    <td>300</td>
+                    <td style="color: #11781f;">4 stars</td>
+                    <td>24/3/2024</td>
+                    <td> 1 month </td>
+                    <td style="color: red;"> 200$ </td>
+                  </tr>
+                  <tr>
+                    <td>Wafaa abuzlfh</td>
+                    <td>11</td>
+                    <td style="color: #11781f;">4 stars</td>
+                    <td>24/3/2024</td>
+                    <td> 1 month </td>
+                    <td style="color: red;"> 200$ </td>
+                  </tr>
+                  <tr>
+                    <td>Wafaa abuzlfh</td>
+                    <td>12</td>
+                    <td style="color: #11781f;">4 stars</td>
+                    <td>24/3/2024</td>
+                    <td> 1 month </td>
+                    <td style="color: red;"> 200$ </td>
+                  </tr>
+              </table>
+            </div>
+        <div id="Add" class="tabcontent" style="display: none;">
+          <div class="add-book"><h3>Add a booking</h3></div>
+          <div class="add-book">
+            <label><i class="fa-solid fa-user"></i></label><input type="text" placeholder="First Name">
+            <label><i class="fa-solid fa-user"></i></label><input type="text" placeholder="last Name">
+          </div>
+          <div class="add-book">
+            <label><i class="fa-solid fa-envelope"></i></label><input type="text" placeholder="Email">
+            <label><i class="fa-solid fa-phone"></i></label><input type="text" placeholder="phone number">
+          </div>
+          <div class="add-book">
+           <label> <i class="fa-solid fa-house"></i></label><input type="text" placeholder="room: ex.110">
+          <label><i class="fa-solid fa-star"></i></label><input type="text" placeholder="type">
+        </div>
+        <div class="add-book">
+          <label><i class="fa-regular fa-calendar-days"></label></i><input type="text" placeholder="Date">
+          <label><i class="fa-regular fa-calendar-days"></i></label><input type="text" placeholder="period: 1 month">  
+        </div>
+        <div class="add-book">
+          <button type="submit">submit</button>
+        </div>        
+        </div></div>
+        <div class="main-tabs" id="Front-Desk" style="display: none;">
+          <select class="choose-tr" id="searchColumn">
+            <option value="name">Name</option>
+            <option value="room">Room</option>
+          </select>
+          <label><i class="fa-solid fa-magnifying-glass"></i></label><input type="text" class="tablink-search" placeholder="room: ex, 110" id="searchInput" onkeyup="searchTableDesk()">
+          
+          <div class="front-table">
+            <table id="desktable">
+              <tr>
+                <th class="table-title">Name</th>
+                <th class="table-title">Room</th>
+                <th class="table-title">Payment</th>
+                <th class="table-title">Date</th>
+                <th class="table-title">Access</th>
+                <th class="table-title">Departure</th>
+              </tr>
+              <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>105</td>
+                <td style="color: red;"> -100$ </td>
+                <td>24/3/2024</td>
+                <td style="background: #11781f; color: #fff;"> yes </td>
+                <td style="background: orange;" contenteditable="true"> No 
+                  <div class="select-wrapper" style="display: none;">     
+                  <select>
+                          <option value="1">yes</option>
+                          <option value="2">No</option>
+                       </select></div></td>
+              </tr>
+              <tr>
+                <td>Wafaa AbuZlfh</td>
+                <td>105</td>
+                <td style="color: black;">0.0</td>
+                <td>24/3/2024</td>
+                <td style="background: red; color: #fff;"> No </td>
+                <td style="background: #777;"> --- </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="main-tabs" id="HouseKeeping" style="display: none;">
+          
+          <div class="house">
+            
+            <!-- <div class="search-house">
+              <label><i class="fa-solid fa-magnifying-glass"></i></label><input type="text" class="tablink-search" placeholder="room: ex, 110" id="houseInput" onkeyup="searchTableHouse()">
+            </div> -->
+            <table id="houseTable">
+              <tr>
+                <th class="table-title" style="background: #2f5ee0;">Clean</th>
+                <th class="table-title" style="background: #03fc6f;">In-Progress</th>
+                <th class="table-title" style="background: #f04f41;">Dirty</th>
+                <th class="table-title" style="background: #ccc3a3;">Unassigned</th>
+              </tr>
+              <tr>
+                <td style="color: #2f5ee0;">101</td>
+                <td style="color: #03fc6f;">110</td>
+                <td style="color: #f04f41;">111</td>
+                <td style="color: #968d6c">201</td>
+              </tr>
+              <tr>
+                <td style="color: #2f5ee0;">102</td>
+                <td style="color: #03fc6f;">115</td>
+                <td style="color: #f04f41;">112</td>
+                <td style="color: #968d6c">204</td>
+              </tr>
+              <tr>
+                <td style="color: #2f5ee0;">103</td>
+                <td style="color: #03fc6f;">116</td>
+                <td style="color: #f04f41;">113</td>
+                <td style="color: #968d6c">205</td>
+              </tr>
+              <tr>
+                <td style="color: #2f5ee0;">104</td>
+                <td style="color: #03fc6f;">117</td>
+                <td style="color: #f04f41;">114</td>
+                <td style="color: #968d6c">205</td>
+              </tr>
+              <tr>
+                <td style="color: #2f5ee0;">106</td>
+                <td style="color: #03fc6f;">118</td>
+                <td style="color: #f04f41;">120</td>
+                <td style="color: #968d6c">210</td>
+              </tr>
+              <tr>
+                <td style="color: #2f5ee0;">107</td>
+                <td style="color: #03fc6f;">119</td>
+                <td style="color: #f04f41;">123</td>
+                <td style="color: #968d6c">211</td>
+              </tr>
+              <tr>
+                <td style="color: #2f5ee0;">108</td>
+                <td style="color: #03fc6f;">124</td>
+                <td style="color: #f04f41;">123</td>
+                <td style="color: #968d6c">215</td>
+              </tr>
+            </table>
+          </div>
+          <div class="circle-container">
+            <div class="circle" id="circle">
+              <div class="quarter" id="q1" ></div>
+              <div class="quarter" id="q2"></div>
+              <div class="quarter" id="q3"></div>
+              <div class="quarter" id="q4"></div>
+              <div class="circle2" id="circle2"></div>
+            </div>
+            <div class="house-color"><i class="fa-solid fa-circle" style="color: #2f5ee0;"></i><p>Clean</p></div>
+            <div class="house-color"><i class="fa-solid fa-circle" style="color: #968d6c;"></i><p>Unassigned</p></div>
+            <div class="house-color"><i class="fa-solid fa-circle" style="color: #03fc6f;"></i><p>In-Progress</p></div>
+            <div class="house-color"><i class="fa-solid fa-circle" style="color: #f04f41;"></i><p>Dirty</p></div>
+          </div>
+        </div>
+        <div class="main-tabs" id="Reports & Analytics" style="display: none;">
+          HIIII
+        </div>
+        <div class="main-tabs" id="Notes" style="display: none;">
+          HIIII
+        </div>
+      </div>
+
+    </div>
+</body>
+<script>
+  document.getElementById('HotelPMS').addEventListener('click', function() {
+         room = document.getElementById('pmscomponent');
+         if (room.style.display === 'none') {
+                room.style.display = 'block';} 
+        else {
+                room.style.display = 'none'; }
+        });
+    function openPage(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "#ccc";
+    }
+    document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+  }
+  document.getElementById("defaultOpen").click();
+  function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+    
+function openPMS(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    var pageTitle = document.getElementById("rev-title");
+    pageTitle.textContent = pageName
+    tabcontent = document.getElementsByClassName("main-tabs");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("part");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+  }
+  document.getElementById("defaultOpen").click();
+  function searchTableDesk() {
+    // Declare variables
+    var input, filter, table, tr, td, columnIndex, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("desktable");
+    tr = table.getElementsByTagName("tr");
+    columnIndex = document.getElementById("searchColumn").selectedIndex;
+
+    // Loop through all table rows, and hide those that don't match the search query
+    for (var i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[columnIndex];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
+
+function searchTableHouse() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("houseInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("houseTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+// Calculate percentage of each color section
+const totalPercentage = 100;
+const percentages = {
+  "red": 25,
+  "blue": 25,
+  "green": 25,
+  "yellow": 25
+}; // تغيير هذه القيم حسب الحاجة
+
+// Apply percentages to each quarter
+document.querySelectorAll('.quarter').forEach((quarter, index) => {
+  const color = Object.keys(percentages)[index];
+  const percentage = percentages[color];
+  const startAngle = index * 90;
+  const endAngle = startAngle + (percentage / totalPercentage) * 360;
+  quarter.style.clipPath = `polygon(50% 50%, 100% 0%, 50% 0%, 50% 50%, ${startAngle}deg ${endAngle}deg)`;
+});
+
+
+  </script>
+</html>

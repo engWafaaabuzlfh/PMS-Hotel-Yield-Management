@@ -1,0 +1,299 @@
+{% extends 'yield/navyield.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>RoomType|Property Mangement System</title>
+	<meta name="viewport"content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<link rel="stylesheet" href="{% static 'css/monthly1.css' %}">
+</head>
+<body style="background: #f2f2f2;">
+    <div class="monthly-container">
+        <div class="monthly-tabs">
+            <button class="now-monthly" onclick="openMonth('now', this, '#080833')">Present monthly</button>
+            <button class="now-monthly" onclick="openMonth('past', this, '#080833')">past monthly</button>
+        </div>
+        <div class="monthly-container-1" id="past" style="display: none;">
+            <div class="type-NN">
+                <select>
+                <option>Occupancy</option>
+                <option>ADR</option>
+            </select></div>
+            <table class="monthly-table">
+                <tr>
+                    <th class="monthly-type">  </th>
+                    <th class="month"> Mar <br><span>2024</span></th>
+                    <th class="month"> Feb <br><span>2024</span> </th>
+                    <th class="month"> Jan <br><span>2024</span> </th>
+                    <th class="month"> Dec <br><span>2023</span></th>
+                    <th class="month"> Nov <br><span>2023</span></th>
+                    <th class="month"> Oct <br><span>2023</span></th>
+                    <th class="month"> Sep <br><span>2023</span></th>
+                    <th class="month"> Aug <br><span>2023</span></th>
+                    <th class="month"> Jul <br><span>2023</span></th>
+                    <th class="month"> Jun <br><span>2023</span></th>
+                    <th class="month"> May <br><span>2023</span></th>
+                    <th class="month"> Apr <br><span>2023</span></th>
+                    <th class="month"> Mar <br><span>2023</span></th>
+                    <th class="month"> Feb <br><span>2023</span> </th>
+                    <th class="month"> Jan <br><span>2023</span> </th>
+                    
+                    
+                    
+                    
+                    
+                   
+                    
+                    
+                    
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Individual Sold</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Group Sold</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m"> </td>
+                    <td class="month-m"> </td>
+                    <td class="month-m"> </td>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Allotment Sold</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m"> </td>
+                    <td class="month-m"> </td>
+                    <td class="month-m"> </td>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Group Tentative Sold</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m"> </td>
+                    <td class="month-m"> </td>
+                    <td class="month-m"> </td>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Allotment Tentative Sold</td>
+                    <td class="month-m"> </td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m"> </td>
+                    <td class="month-m"> </td>
+                    <td class="month-m"> </td>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Total </td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                     <td class="month-m"> </td>
+                    <td class="month-m"> </td>
+                    <td class="month-m"> </td>
+                </tr>
+                
+            </table>
+        </div>
+        <div class="monthly-container-1" id="now" style="display: none;">
+        <div class="monthly-container-2">
+            <div class="type-NN">
+                <select>
+                <option>Occupancy</option>
+                <option>Pick-up Variance</option>
+            </select></div>
+            <table class="monthly-table">
+                <tr>
+                    <th class="monthly-type">  </th>
+                    <th class="month"> Apr <br><span>2024</span></th>
+                    <th class="month"> May <br><span>2024</span></th>
+                    <th class="month"> Jun <br><span>2024</span></th>
+                    <th class="month"> Jul <br><span>2024</span></th>
+                    <th class="month"> Aug <br><span>2024</span></th>
+                    <th class="month"> Sep <br><span>2024</span></th>
+                    <th class="month"> Oct <br><span>2024</span></th>
+                    <th class="month"> Nov <br><span>2024</span></th>
+                    <th class="month"> Dec <br><span>2024</span></th>
+                    <th class="month"> Jan <br><span>2025</span></th>
+                    <th class="month"> Feb <br><span>2025</span></th>
+                    <th class="month"> Mar <br><span>2025</span></th>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Individual Sold</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Group Sold</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Allotment Sold</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Group Tentative Sold</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Allotment Tentative Sold</td>
+                    <td class="month-m"> </td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                    <td class="month-m">2.243</td>
+                </tr>
+                <tr>
+                    <td class="monthly-type-m">Now Total </td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                    <td class="month-m">--</td>
+                </tr>
+                
+            </table>
+        </div></div>
+    </div>
+</body>
+<script>
+    var spanNav = document.getElementById("span-nav")
+    spanNav.innerHTML = "Monthly Totals"
+    function openMonth(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("monthly-container-1");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("now-monthly");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "#ccc";
+    }
+    document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+  }
+  document.getElementById("defaultOpen").click();
+    
+    
+</script>
+{% endblock content %}

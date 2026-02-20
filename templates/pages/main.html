@@ -1,0 +1,138 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website | HOME</title>
+    <!-- Main css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/base1.css' %}">
+</head>
+<style>
+    .navbar-main{
+        background-image: url("{% static 'images/h1.jpg' %}");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 450px;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<div class="navbar-main">
+
+    <nav id="navbar">
+      <a href="#" class="nav-icon"><i class="fa-solid fa-bars"></i></a>
+        <div class="navbar-left">
+            LOGO
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li>About <i class="fa-solid fa-tag"></i></li>
+                 <!-- <li>EN <i class="fa-solid fa-globe"></i></li> -->
+                <a href="{% url 'LoginForm' %}"><li> log In <i class="fa-solid fa-user"></i></li></a>
+                <a href="#"><li> Pricing <i class="fa-solid fa-circle-dollar-to-slot"></i></li></a>
+                <a href="{% url 'YieldDASHBoard' %}"><li> Rate Management <i class="fa-solid fa-money-bill-trend-up"></i></li></a>
+            </ul>
+        </div>
+    </nav>
+    <div class="title">
+        <h1>Website.com</h1>
+        <h2>Maximize revenues</h2>
+        <h3>easily, simply, effectively and flexibly</h3>
+    </div>
+</div>
+<div class="item-yield">
+    <div class="item-yield-right">
+       <img src="{% static 'images/Contact.png' %}"/>
+    </div>
+    <div class="item-yield-left" id="special-item">
+       <p class="item-title"> Revenue Management System Features:</p>
+        <p><i class="fa-solid fa-square-check"></i>Competitors' prices</p>
+        <p><i class="fa-solid fa-square-check"></i>Demand forecast</p>
+        <p><i class="fa-solid fa-square-check"></i>Monthly revenues</p>
+        <p><i class="fa-solid fa-square-check"></i>Smart Tips "AI"</p>
+        <p><i class="fa-solid fa-square-check"></i>Settings to control revenues </p>
+    </div>
+  </div>
+  <!--
+  <div class="item-yield">
+    <div class="item-yield-right" id="special-item">
+       <p> pla pal</p>
+    </div>
+    <div class="item-yield-left">
+        <img src="{% static 'images/Green and Black Simple Dots Business Revenue Graph (1).png' %}"/>
+    </div>
+  </div>
+  -->
+  <div class="item-yield" style="background: #fff;">
+    <div class="item-yield-right">
+       <p class="item-title"> <h4>Integrated revenue management with competitor prices:</h4> 
+        <br><span><i class="fa-solid fa-square-check"></i>for all surrounding and nearby hotels</span><br> 
+        <span><i class="fa-solid fa-square-check"></i>With favorites feature </span><br>
+        <h5>With full monitoring of your revenues via a specialized Dashboard <br>that displays <span>revenues, forecasts, and updates moment by moment.</span></h5></p>
+    </div>
+    <div class="item-yield-left">
+       <img src="{% static 'images/Taupe Neutral Warm Minimalist Business Laptop Mockup Facebook Post.png' %}"/>
+    </div>
+  </div>
+  <div class="item-yield" style="background: #fff;">
+    <div class="item-yield-right">
+       <img src="{% static 'images/Green and Black Simple Dots Business Revenue Graph.png' %}"/>
+    </div>
+    
+    <div class="item-yield-left-2">
+       <p class="item-title"> Providing revenue analyses</p>
+        <p class="item-part">Daily</p>
+        <p class="item-part">weekly</p>
+        <p class="item-part">monthly</p>
+
+        <p class="item-next">For all room types</p>
+
+    </div>
+  </div>
+  <div class="item-req">
+    <button class="btn-req">Register</button>
+    <button class="btn-req">Free Trail </button>
+  </div>
+  
+  <div class="footer-main">
+    <div class="footer-part">
+        <h2>website.com</h2>
+    </div>
+    <div class="footer-part">
+        <h3>Revenue Management</h3>
+        <h3>Pricing</h3>
+    </div>
+    <div class="footer-part">
+        <h3>About</h3>
+        <h3>help Center</h3>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function(){
+        $('.nav-icon').click(function(event){
+            $('.navbar-right').toggleClass('active')
+        });
+    });
+ // Get the navbar element
+var navbar = document.getElementById("navbar");
+
+// Function to change navbar style when content is scrolled
+function handleScroll(event) {
+  if (window.scrollY > 60) { // Change 100 to whatever position you desire
+    navbar.classList.add("navbar-scrolled");
+  } else {
+    navbar.classList.remove("navbar-scrolled");
+  }
+}
+
+// Add event listener for scroll event
+document.addEventListener("scroll", handleScroll);
+
+</script>
+</html>
+

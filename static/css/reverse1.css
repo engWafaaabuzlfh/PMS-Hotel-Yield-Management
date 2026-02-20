@@ -1,0 +1,274 @@
+.container{
+    background: #fff;
+    width: 100%;
+}
+nav{
+    width: 100%;
+    height: 110px;
+}
+.rev-nav{
+    width: 79%;
+    float: left;
+}
+.rev-nav-left{
+    margin-left: 10px;
+    font-size: 25px;
+    float: left;
+    margin-top: 10px;
+}
+
+.rev-title{
+    color: #080833;
+    margin-left: 500px;
+    font-size: 25px;
+    height: 50px;
+}
+.Hotel-account{
+    margin-right: 10px;
+    margin-top: 0;
+    width: 10%;
+    float: right;
+    margin-top: 20px;
+    height: 50px;
+}
+.Hotel-account i{
+    font-size: 32px;
+}
+nav hr{
+    margin-top: -10px;
+    width: 100%;
+}
+
+.vertical {
+    border-left: 2px solid lightgray;
+    height: 90px;
+    position: absolute;
+    margin-left: -3px;
+    top: 0;
+  }
+
+.main-left{
+    background: #fff;
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    padding: 0px;
+    border: none;
+    float: left;
+    
+}
+.main-left hr{
+    width: 100%;
+    color: #fff;
+}
+.main-left a{
+    text-decoration: none;
+    color: #fff;
+}
+.main-left .part{
+    width: 98%;
+    background-color: #080833;
+    border-radius: 15px;
+    height: auto;
+    padding: 8px 0px 15px 0px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+}
+.main-left .pms-right{
+    color: #080833;
+    height: 25px;
+    padding-top: 3px;
+}
+.main-left .pms-right button{
+    color: #080833;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.main-tabs{
+    float: left;
+    width: calc(100% - 300px);
+    padding-left: 5px;
+    padding: 1px 20px 10px 5px;
+ 
+}
+.main-tabs label{
+    position: absolute;
+    margin-left: 275px;
+    padding-top: 15px;
+    color: #080833;
+}
+.tablink-search{
+    width: 275px;
+    height: 40px;
+    background: #f2f2f2;
+    color: #080833;
+    border: 1px solid #080833;
+    margin-left: 20px;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.tablink{
+    width: 190px;
+    height: 40px;
+    color: #fff;
+    background: #080833;
+    border: none;
+    margin-left: 20px;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.tabcontent{
+    text-align: center;
+}
+table{
+    border: 2px solid lightgray;
+    width: calc(100%-300px);
+    margin-left: 20px;
+    margin-top: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+table tr th{
+    border: 1px solid lightgray;
+    width: 170px;
+    height: 40px;
+}
+.table-title{
+    background-color: #0373fc;
+}
+table tr td{
+    border: 1px solid lightgray;
+    text-align: center;
+    height: 30px;
+    font-size: 18px;
+}
+table tr td:hover .select-wrapper {
+    display: block;
+}
+.tabcontent h4{
+    text-align: center;
+    width: 100%;
+}
+.tabcontent .add-book{
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.main-tabs .add-book label{
+    position: absolute;
+    color: #080833;
+    margin-right: 35px;
+}
+.main-tabs .choose-tr{
+    width: 100px;
+    height: 40px;
+    margin-left: 150px;
+    border-radius: 5px;
+    border: 1px solid #080833;
+}
+.choose-tr option{
+    height: 50px;
+}
+.add-book input{
+    width: 250px;
+    height: 44px;
+    padding-left: 23px;
+    margin-left: 30px;
+}
+.add-book button{
+    width: 150px;
+    height: 40px;
+    background: #080833;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.house{
+    width: 80%;
+    float: left;
+}
+
+.search-house{
+    margin-left: 30px;
+}
+.search-house input{
+    width: 80%;
+    border-radius: 18px;
+    border: 1px solid #ccc3a3;
+    padding-left: 30px;
+}
+.search-house label{
+    margin-left: 30px;
+}
+.house-color{
+    width: 200px;
+    text-align: right;
+}
+.house-color i{
+    width: 25px;
+    float: right;
+}
+
+.circle-container {
+    width: 180px;
+    height: 180px;
+    float: left;
+  }
+  
+ .circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff; /* لون الدائرة الداخلية */
+} 
+  
+.circle2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: #fff;
+  }
+  
+.quarter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#q1,#q2,#q3,#q4 {
+    clip-path: polygon(50% 50%, 80% 0%, 0% 0%);
+}
+#q1 {
+  background-color: #f04f41;
+  transform: rotate(0deg);
+}
+
+#q2 {
+  background-color: #2f5ee0;
+  transform: rotate(90deg);
+}
+
+#q3 {
+  background-color: #03fc6f;
+  transform: rotate(180deg);
+}
+
+#q4 {
+  background-color: #ccc3a3;
+  transform: rotate(270deg);
+}
