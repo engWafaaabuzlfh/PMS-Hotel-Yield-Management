@@ -41,12 +41,10 @@ Main tables in the `yieldManagement` app:
 
 ## Project Structure Image (Placeholder)
 
-
-```md
 ![Project Structure](docs/stucture2.png)
 
 ![Project Structure](docs/stucture1.png)
-```
+
 
 ### login - SignIn:
 ![login image](image.png)
