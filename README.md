@@ -43,7 +43,7 @@ Main tables in the `yieldManagement` app:
 
 ![Project Structure](docs/stucture2.png)
 
-![Project Structure](docs/stucture1.png)
+![Project Structure](docs/structure1.png)
 
 
 ### login - SignIn:
