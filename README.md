@@ -3,6 +3,8 @@
 A **PMS** Yield/Revenue Management system for hotels built with Django.  
 It helps operations and pricing teams make faster decisions based on market, occupancy, and forecast data.
 
+![Project Structure](docs/stucture2.png)
+
 ## What This Project Provides for Hotels
 
 - Monitor competitor and market prices through the **Market Place** page by city for upcoming days.
@@ -39,26 +41,6 @@ Main tables in the `yieldManagement` app:
 
 > Most settings tables are linked to users through `user_name` (ForeignKey to `django.contrib.auth.models.User`).
 
-## Project Structure Image (Placeholder)
-
-![Project Structure](docs/stucture2.png)
-
-![Project Structure](docs/structure1.png)
-
-
-### login - SignIn:
-![login image](image.png)
-
-# frontend:
-![dashboard](image-1.png)
-
-![canvas](image-2.png)
-
-![monthely total](image-3.png)
-
-![dow-yoy](image-4.png)
-
-![frocasts](image-5.png)
 ## Run the Project
 
 1. Create a virtual environment:
@@ -102,3 +84,29 @@ python manage.py runserver
 - The **Market Place** feature depends on RapidAPI calls in `yieldManagement/booKingApi.py`.
 - Ensure a `Vendor` entry with name `booking.com` exists so marketplace pricing retrieval works correctly.
 - Move API keys from source code to environment variables before production deployment.
+
+
+## Project Structure Image (Frontend)
+
+![Project Structure](docs/stucture2.png)
+
+![Project Structure](docs/structure1.png)
+
+![login image](docs/image.png)
+
+![dashboard](docs/image-1.png)
+
+![canvas](docs/image-2.png)
+
+![monthly total](docs/image-3.png)
+
+![dow-yoy](docs/image-4.png)
+
+![forecasts](docs/image-5.png)
+
+
+### Contact Information
+For support, feedback, or collaboration requests, please use the repository issue tracker.
+
+- Facebook: [account facebook](https://www.facebook.com/profile.php?id=100091990741824)
+- LinkedIn: [account linkedIn](https://www.linkedin.com/in/wafaa-abuzlfh-670a15252/)
